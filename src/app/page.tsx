@@ -57,7 +57,7 @@ export default function Home() {
           items={PAST_TECHNOLOGIES}
         />
         <TechGrid
-          title="Currently I'm learning these on my free time"
+          title="Currently I'm learning these in my free time"
           items={LEARNING_TECHNOLOGIES}
         />
       </Section>
