@@ -49,7 +49,7 @@ export default function Home() {
           items={OTHER_TECHNOLOGIES}
         />
         <TechGrid
-          title="I'm not too familiar with these anymore but I have used in the past"
+          title="I'm not too familiar with these anymore but I have used them in the past"
           items={PAST_TECHNOLOGIES}
         />
         <TechGrid
