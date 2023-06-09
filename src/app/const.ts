@@ -95,7 +95,7 @@ export const OTHER_TECHNOLOGIES: Technology[] = [
     },
     {
         name: 'SQL',
-        src: '/icons/SQL.svg'
+        src: '/icons/sql.svg'
     },
     {
         name: 'Contentful',
