@@ -19,8 +19,6 @@ const Hero: React.FC<HeroProps> = ({ imageSrc, imageAlt, children }) => {
             src={imageSrc}
             alt={imageAlt}
             priority
-            width={1080}
-            height={1980}
           />
         </TiltingBox>
       </div>
