@@ -1,6 +1,5 @@
 import { useMemo } from "react";
 import Hero from "./components/Hero";
-import TechIcon from "./components/TechIcon";
 import {
   LEARNING_TECHNOLOGIES,
   OTHER_TECHNOLOGIES,
@@ -10,11 +9,13 @@ import {
 import TechGrid from "./components/TechGrid";
 import Section from "./components/Section";
 
+import heroImage from "../../public/images/hero.png";
+
 export default function Home() {
   const thisYear = useMemo(() => new Date().getFullYear(), []);
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <Hero imageSrc="/images/hero.jpg" imageAlt="Mark Youssef">
+      <Hero imageSrc={heroImage} imageAlt="Mark Youssef">
         <div className="sticky top-1/4 text-md lg:text-l">
           <h1 className="text-4xl lg:text-5xl leading-snug mb-1">
             Hi there <span className="inline-block animate-wiggle">👋</span>
