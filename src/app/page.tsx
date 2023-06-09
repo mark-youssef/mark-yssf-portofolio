@@ -1,13 +1,16 @@
 import { useMemo } from "react";
+
+import Image from "next/image";
+
 import Hero from "./components/Hero";
+import Section from "./components/Section";
+import TechGrid from "./components/TechGrid";
 import {
   LEARNING_TECHNOLOGIES,
   OTHER_TECHNOLOGIES,
   PAST_TECHNOLOGIES,
   TECHNOLOGIES,
 } from "./const";
-import TechGrid from "./components/TechGrid";
-import Section from "./components/Section";
 
 import heroImage from "../../public/images/hero.png";
 
@@ -59,20 +62,21 @@ export default function Home() {
         />
       </Section>
       <Section>
-        <h2 className="text-3xl lg:text-4xl mb-4">Get in touch</h2>
-        <a
-          className="badge-base__link LI-simple-link"
-          href="https://www.linkedin.com/in/markyoussef?trk=profile-badge"
-        >
-          <div
-            className="badge-base LI-profile-badge"
-            data-locale="en_US"
-            data-size="large"
-            data-theme="light"
-            data-type="HORIZONTAL"
-            data-vanity="markyoussef"
-            data-version="v1"
-          ></div>
+        <h2 className="text-3xl lg:text-4xl mb-6">Get in touch</h2>
+        <a href="https://www.linkedin.com/in/markyoussef">
+          <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#cfe3f7_0%,#5a8cbf_50%,#cfe3f7_100%)]" />
+            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-5 py-1 text-sm font-medium backdrop-blur-3xl">
+              <Image
+                src="/icons/linkedin.svg"
+                alt="linkedin logo"
+                width="32"
+                height="32"
+                className="mr-1"
+              />
+              Connect at LinkedIn
+            </span>
+          </button>
         </a>
       </Section>
     </main>
