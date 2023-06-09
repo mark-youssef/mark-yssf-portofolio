@@ -30,7 +30,7 @@ const TechIcon: React.FC<TechIconProps> = ({
   }
 
   return (
-    <div className="p-2 text-center transition-transform duration-200 ease-in-out hover:scale-125">
+    <div className="p-2 text-center transition-transform duration-500 ease-out hover:scale-125">
       {icon}
       <p>{name}</p>
     </div>
