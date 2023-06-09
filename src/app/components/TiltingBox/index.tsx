@@ -8,7 +8,7 @@ type TiltingBoxProps = {
 
 const TiltingBox: React.FC<TiltingBoxProps> = ({ className, children }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const [rotation, setRotation] = useState<{ x: Number; y: Number } | null>(
+  const [rotation, setRotation] = useState<{ x: number; y: number } | null>(
     null
   );
   const onMouseMove: React.MouseEventHandler<HTMLDivElement> = (ev) => {
@@ -48,6 +48,20 @@ const TiltingBox: React.FC<TiltingBoxProps> = ({ className, children }) => {
             : { transform: "rotate(0deg)" }
         }
       >
+        <div
+          className="absolute top-0 left-0 z-20 w-full h-full transition-transform origin-center transform-gpu opacity-20 duration-500 ease-out"
+          style={{
+            background:
+              "radial-gradient(ellipse, rgba(255,255,255,1) 0%, rgba(0,0,0,0) 50%)",
+            mixBlendMode: "plus-lighter",
+            transform: rotation
+              ? `scale(1.2) translateX(${rotation.y * 10}px) translateY(${
+                  rotation.x * -15
+                }px)`
+              : "",
+          }}
+        />
+        <div className="absolute top-0 left-0 z-10 w-full h-full bg-black opacity-20 mix-blend-multiply" />
         {children}
       </div>
     </div>
